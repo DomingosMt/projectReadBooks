@@ -33,6 +33,7 @@ btnCadastro.addEventListener("click", () => {
     btnCadastro.classList.add("bg-[#006970]", "text-white");
     formCadastro.classList.remove("hidden");
     formLogin.classList.add("hidden");
+    
 })
 
 btnLogin.addEventListener("click", () => {
