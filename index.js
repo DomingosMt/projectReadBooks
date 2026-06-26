@@ -1,6 +1,6 @@
 const btnLogin = document.getElementById("btn-login");
 const btnCadastro = document.getElementById("btn-cadastro");
-const formLogin = document.getElementById("btn-login");
+const formLogin = document.getElementById("form-login");
 const formCadastro = document.getElementById("form-cadastro");
 const divSenha = document.getElementById("div-senha");
 
