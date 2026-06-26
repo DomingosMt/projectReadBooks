@@ -3,6 +3,8 @@ const btnCadastro = document.getElementById("btn-cadastro");
 const formLogin = document.getElementById("form-login");
 const formCadastro = document.getElementById("form-cadastro");
 const divSenha = document.getElementById("div-senha");
+const btnRevealed = document.getElementById("btn-revealed");
+const btnHidden = document.getElementById("btn-hidden");
 
 
 const usuarios = [
@@ -38,6 +40,18 @@ btnLogin.addEventListener("click", () => {
     btnCadastro.classList.remove("bg-[#006970]", "text-white");
     formCadastro.classList.add("hidden");
     formLogin.classList.remove("hidden");
+})
+
+btnRevealed.addEventListener("click", () => {
+    let passwordChange = document.getElementById("senhaCadastro").type = 'text'
+    btnRevealed.classList.add("hidden");
+    btnHidden.classList.remove("hidden");
+})
+
+btnHidden.addEventListener("click", () => {
+    let passwordChange = document.getElementById("senhaCadastro").type = 'password'
+    btnHidden.classList.add("hidden");
+    btnRevealed.classList.remove("hidden");
 })
 
 function handleLogin(event) {

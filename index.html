@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
     <title>ReadBooks</title>
   </head>
 
@@ -64,14 +69,14 @@
 
           <div class="flex justify-between mt-3">
             <div>
-              <input type="checkbox" />
+              <input type="checkbox"/>
               <label for="">Mantenha-se logado.</label>
             </div>
             <a href="/esqueceu-senha">Esqueceu a senha?</a>
           </div>
           <button
             type="submit"
-            class="bg-[#006970] px-15 py-2 rounded-lg w-full text-white mt-5"
+            class="bg-[#006970] px-15 py-2 rounded-lg w-full text-white mt-5 cursor-pointer"
           >
             Entrar
           </button>
@@ -106,13 +111,21 @@
 
           <div>
             <label for="senha">Senha</label>
-            <input
-              placeholder="Crie a sua senha"
-              type="password"
-              name="senha"
-              id="senhaCadastro"
-              class="w-full border border-[#d9d9db] rounded-md p-2 mt-2"
-            />
+            <div class="flex relative">
+                <input
+                  placeholder="Crie a sua senha"
+                  type="password"
+                  name="senha"
+                  id="senhaCadastro"
+                  class="w-full border border-[#d9d9db] rounded-md p-2 mt-2"
+                />
+                <button id="btn-revealed" class="absolute bottom-4.5 top-4.5 right-3 cursor-pointer">
+                    <i class="ph ph-eye"></i>
+                </button>
+                <button id="btn-hidden" class="absolute bottom-4.5 top-4.5 right-3 hidden cursor-pointer">
+                    <i class="ph ph-eye-slash"></i>
+                </button>
+            </div>
           </div>
 
           <div>
@@ -122,12 +135,12 @@
               type="date"
               name="date"
               id="dataNascimento"
-              class="w-full border border-[#d9d9db] rounded-md p-2 mt-2"
+              class="w-full border border-[#d9d9db] rounded-md p-2 mt-2 cursor-pointer"
             />
           </div>
 
           <div class="flex gap-2 mt-4">
-            <input type="checkbox" />
+            <input type="checkbox"/>
             <label
               >Ao clicar nesta caixa, você está concordando com nossos
               <a href="#" class="no-underline hover:underline">termos de uso</a
@@ -137,12 +150,12 @@
 
           <button
             type="submit"
-            class="bg-[#006970] px-15 py-2 rounded-lg w-full text-white mt-5"
+            class="bg-[#006970] px-15 py-2 rounded-lg w-full text-white mt-5 cursor-pointer"
           >
             Cadastrar
           </button>
         </form>
-        <p class="text-center mt-30">
+        <p class="text-center mt-30 h-auto">
           &copy; Todos os direitos reservados. 2026
         </p>
       </div>
