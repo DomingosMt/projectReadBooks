@@ -5,6 +5,7 @@ const formCadastro = document.getElementById("form-cadastro");
 const divSenha = document.getElementById("div-senha");
 const btnRevealed = document.getElementById("btn-revealed");
 const btnHidden = document.getElementById("btn-hidden");
+const titleSession = document.getElementById("title-form")
 
 
 const usuarios = [
@@ -33,7 +34,10 @@ btnCadastro.addEventListener("click", () => {
     btnCadastro.classList.add("bg-[#006970]", "text-white");
     formCadastro.classList.remove("hidden");
     formLogin.classList.add("hidden");
-    
+    titleSession.innerHTML = (`
+        <h2 class="text-2xl pt-3">Crie sua conta</h2>
+        <p>Insira seus dados para criar sua conta.</p>  
+        `)
 })
 
 btnLogin.addEventListener("click", () => {
@@ -41,16 +45,20 @@ btnLogin.addEventListener("click", () => {
     btnCadastro.classList.remove("bg-[#006970]", "text-white");
     formCadastro.classList.add("hidden");
     formLogin.classList.remove("hidden");
+    titleSession.innerHTML = (`
+        <h2 class="text-2xl pt-3">Iniciar sessão</h2>
+        <p>Insira seus dados para acessar sua estante.</p>
+        `)
 })
 
 btnRevealed.addEventListener("click", () => {
-    let passwordChange = document.getElementById("senhaCadastro").type = 'text'
+    const passwordChange = document.getElementById("senhaCadastro").type = 'text'
     btnRevealed.classList.add("hidden");
     btnHidden.classList.remove("hidden");
 })
 
 btnHidden.addEventListener("click", () => {
-    let passwordChange = document.getElementById("senhaCadastro").type = 'password'
+    const passwordChange = document.getElementById("senhaCadastro").type = 'password'
     btnHidden.classList.add("hidden");
     btnRevealed.classList.remove("hidden");
 })
@@ -79,4 +87,4 @@ function handleCadastro(event) {
     const emailCadastro = document.getElementById("emailCadastro").value
     const senhaCadastro = document.getElementById("senhaCadastro").value
     const nome = document.getElementById("nome").value
-}
+}   
